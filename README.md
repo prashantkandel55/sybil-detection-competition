@@ -20,6 +20,18 @@ sybil/
 └── README.md
 ```
 
+## Downloading the Dataset
+
+To run this pipeline, you need the official competition datasets for both Base and Ethereum chains.
+
+- Download the datasets from: [https://cryptopond.xyz/modelfactory/detail/4712551?tab=1](https://cryptopond.xyz/modelfactory/detail/4712551?tab=1)
+- **After downloading:**
+  1. Unzip (if needed) and rename the folders to `base` and `ethereum` for clarity.
+  2. Place them inside the `data/` directory in your project root, so you have:
+     - `data/base/`
+     - `data/ethereum/`
+  3. Each folder should contain the relevant `.parquet` files as described below.
+
 ## Data Table Relationships
 
 - **Transactions Table:**
@@ -32,10 +44,10 @@ sybil/
   - This allows you to join or merge the tables to get a full picture of what happened in each transaction, including both ETH and token movements.
 
 ## How to Use
-1. **Place Data:**
-   - Place the competition `.parquet` files in the appropriate folders:
-     - `data/base/`
-     - `data/ethereum/`
+1. **Download and Place Data:**
+   - Download the datasets from [cryptopond.xyz/modelfactory](https://cryptopond.xyz/modelfactory/detail/4712551?tab=1)
+   - Rename the folders to `base` and `ethereum`.
+   - Move them into the `data/` directory so you have `data/base/` and `data/ethereum/`.
 2. **Install Dependencies:**
    ```sh
    pip install -r requirements.txt
